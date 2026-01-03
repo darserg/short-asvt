@@ -14,14 +14,14 @@
 
 #text(size: 8pt, top-edge: 1em)[
   #{
-    for num in range(0) {
+    for num in range(1, 16) {
       let filename
       if num < 10 {
         filename = directory + "/0" + str(num) + ".typ"
       } else {
         filename = directory + "/" + str(num) + ".typ"
       }
-      block(breakable: false)[
+      block(breakable: true)[
         #include (filename)
         #v(10pt)
       ]
